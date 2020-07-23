@@ -1,6 +1,7 @@
 import { observable, action, computed, reaction } from "mobx";
 import { createContext } from "react";
 import uuidv4 from "uuid/v4";
+// import I18n from "../../i18n/I18n";
 
 export interface Todo {
   id?: string;
@@ -14,6 +15,7 @@ class TodoStore {
       () => this.todos,
       _ => console.log(this.todos.length)
     );
+    // console.log('5555', I18n.t);
   }
 
   @observable todos: Todo[] = [

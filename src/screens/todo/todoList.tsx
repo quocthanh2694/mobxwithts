@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import TodoStore from "../stores/TodoStore";
 import { observer } from "mobx-react-lite";
+import TodoStore from "./todoStore";
+// import I18n from "../../i18n/I18n";
 
 const TodoList = () => {
   const todoStore = useContext(TodoStore);
@@ -8,6 +9,8 @@ const TodoList = () => {
   return (
     <>
       <div className="row">
+        {/* {I18n.get('appTitle')}
+        {I18n.t[I18n.lng]['appTitle']} */}
         <table className="table table-hover">
           <thead className="thead-light">
             <tr>
